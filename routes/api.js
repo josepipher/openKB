@@ -60,6 +60,7 @@ router.post('/api/validate_permalink', function(req, res){
 // public API for inserting posts
 router.post('/api/newArticle', function(req, res){
     var db = req.app.db;
+    var lunr_index = req.app.index;
     var Validator = require('jsonschema').Validator;
     var v = new Validator();
 
